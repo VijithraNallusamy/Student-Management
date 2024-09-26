@@ -1,4 +1,5 @@
 <template>
+  <HeaderView class="header" key="header" ref="" @toggle-menu="toggleSidebar" />
   <div class="home flex bg-gray-100 min-h-screen">
     <!-- Sidebar with toggle -->
     <SideBar :isExpanded="isSidebarExpanded" @toggle-menu="toggleSidebar" />
@@ -17,6 +18,7 @@
 
 <script>
 import SideBar from "@/components/SideBar.vue";
+import HeaderView from "@/components/HeaderView.vue";
 
 export default {
   data() {
@@ -31,6 +33,7 @@ export default {
   },
   components: {
     SideBar,
+    HeaderView,
   },
 };
 </script>
