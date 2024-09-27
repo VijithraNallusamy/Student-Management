@@ -43,6 +43,7 @@
                   <input
                     type="text"
                     id="name"
+                    v-model="form.name"
                     placeholder="Enter name"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -58,6 +59,7 @@
                   <input
                     type="number"
                     id="age"
+                    v-model="form.age"
                     placeholder="Enter age"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -73,6 +75,7 @@
                   <select
                     name="blood"
                     id="blood"
+                    v-model="form.blood"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   >
                     <option value="">Select</option>
@@ -97,6 +100,7 @@
                   <select
                     name="gender"
                     id="gender"
+                    v-model="form.gender"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   >
                     <option value="">Select</option>
@@ -115,6 +119,7 @@
                   <input
                     type="text"
                     id="standard"
+                    v-model="form.standard"
                     placeholder="Enter Standard"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -130,6 +135,7 @@
                   <input
                     type="text"
                     id="pschoolname"
+                    v-model="form.pschoolname"
                     placeholder="Enter Previous School Name"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -145,6 +151,7 @@
                   <select
                     name="nationality"
                     id="nationality"
+                    v-model="form.nationality"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   >
                     <option value="">Select</option>
@@ -162,6 +169,8 @@
                   >
                   <input
                     type="file"
+                    name="photo"
+                    accept="image/*"
                     id="photo"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -180,6 +189,7 @@
                   <input
                     type="text"
                     id="fname"
+                    v-model="form.fname"
                     placeholder="Enter Father's Name"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -195,6 +205,7 @@
                   <input
                     type="text"
                     id="foccupation"
+                    v-model="form.foccupation"
                     placeholder="Enter Father's Occupation"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -210,6 +221,7 @@
                   <input
                     type="text"
                     id="mname"
+                    v-model="form.mname"
                     placeholder="Enter Mother's Name"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -225,6 +237,7 @@
                   <input
                     type="text"
                     id="moccupation"
+                    v-model="form.moccupation"
                     placeholder="Enter Mother's Occupation"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -240,6 +253,7 @@
                   <input
                     type="text"
                     id="contactnumber"
+                    v-model="form.contactnumber"
                     placeholder="Enter Contact Number"
                     maxlength="12"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
@@ -256,6 +270,7 @@
                   <input
                     type="text"
                     id="altcontact"
+                    v-model="form.altcontact"
                     placeholder="Enter Alternate Contact Number"
                     maxlength="12"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
@@ -272,6 +287,7 @@
                   <input
                     type="email"
                     id="email"
+                    v-model="form.email"
                     placeholder="Enter your Email"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   />
@@ -287,6 +303,7 @@
                   <textarea
                     id="address"
                     rows="3"
+                    v-model="form.address"
                     placeholder="Enter Address"
                     class="block w-full border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 px-4 py-2 text-sm"
                   ></textarea>
@@ -317,7 +334,24 @@ import SideBar from "@/components/SideBar.vue";
 export default {
   data() {
     return {
-      isSidebarExpanded: false,
+      isSidebarExpanded: true,
+      form: {
+        name: "",
+        age: "",
+        bloodGroup: "",
+        gender: "",
+        standard: "",
+        previousSchool: "",
+        nationality: "",
+        fathersName: "",
+        fathersOccupation: "",
+        mothersName: "",
+        mothersOccupation: "",
+        contactNumber: "",
+        altContact: "",
+        email: "",
+        address: "",
+      },
     };
   },
   methods: {

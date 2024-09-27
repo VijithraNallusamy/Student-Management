@@ -25,7 +25,7 @@
       <main class="flex-1 mt-16 p-6">
         <div class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
-            Add Student
+            Add Staff
           </h1>
 
           <form class="text-start">
